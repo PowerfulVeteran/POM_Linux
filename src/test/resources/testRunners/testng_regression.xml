@@ -10,7 +10,7 @@
 <!-- -->
 
 	<test name="ProductInfo page Test">
-		<parameter name="browser" value="edge" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="99" />
 
 		<classes>
@@ -20,7 +20,7 @@
 
 
 	<test name="Registration Page Test">
-		<parameter name="browser" value="edge" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="99" />
 		<classes>
 			<class name="com.qa.nayu.tests.RegistrationPageTest" />
@@ -29,7 +29,7 @@
 
 
 	<test name="Accounts page Test">
-		<parameter name="browser" value="edge" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="99" />
 		<classes>
 			<class name="com.qa.nayu.tests.AccountsPageTest" />
@@ -39,7 +39,7 @@
 
 
 	<test name="Login page Test">
-		<parameter name="browser" value="edge" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="99" />
 		<classes>
 			<class name="com.qa.nayu.tests.LoginPageTest" />
@@ -49,7 +49,7 @@
 
 
 	<test name="Commons page Test">
-		<parameter name="browser" value="edge" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="99" />
 		<classes>
 			<class name="com.qa.nayu.tests.CommonsPageTest" />

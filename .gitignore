@@ -1,6 +1,7 @@
 allure-results/
 screenshots/
 test-output/
+target
 build
 
 ##############################
