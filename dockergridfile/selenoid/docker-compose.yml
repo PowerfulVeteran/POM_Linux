@@ -1,0 +1,31 @@
+version: '3'
+services:
+  selenoid:
+    network_mode: bridge
+    container_name: "selenoid"
+    ports:
+      - "4444:4444" 
+    image: "aerokube/selenoid:latest-release"
+    volumes:
+      - "/c/Users/jigne/dockergridfile/selenoid/:/etc/selenoid/:ro"
+      - "//var/run/docker.sock:/var/run/docker.sock"
+      - "/c/Users/jigne/dockergridfile/selenoid/video/:/opt/selenoid/video/"
+    environment:
+      - OVERRIDE_VIDEO_OUTPUT_DIR=/c/Users/jigne/dockergridfile/selenoid/video/
+      - TZ=Europe/AMSTERDAM
+    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir",
+     "/opt/selenoid/video/" -timeout 3m -limit 10]
+
+    
+
+  selenoid-ui:
+    container_name: "selenoid-ui"
+    image: "aerokube/selenoid-ui"
+    network_mode: bridge
+    links:
+      - selenoid
+    ports:
+      - "8080:8080"
+    command: ["--selenoid-uri", "http://selenoid:4444"]
+
+

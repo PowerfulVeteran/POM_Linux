@@ -1,0 +1,5 @@
+docker run -d -p 4444:4444 --name selenium-hub -P selenium/hub
+http://localhost:4444/ 
+>docker run -d -P --link selenium-hub:hub selenium/node-chrome-debug
+
+>docker run -d -P --link selenium-hub:hub selenium/node-firefox-debug
